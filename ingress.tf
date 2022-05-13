@@ -1,4 +1,5 @@
 resource "kubectl_manifest" "ingressroute" {
+  count     = var.ingress_type == "traefik" ? 1 : 0
   yaml_body = <<-EOF
 ---
 apiVersion: traefik.containo.us/v1alpha1

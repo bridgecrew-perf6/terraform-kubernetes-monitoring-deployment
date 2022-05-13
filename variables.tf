@@ -16,6 +16,12 @@ variable "ingress_dns" {
   description = "The domain name where longhorn should be reachable."
 }
 
+variable "ingress_type" {
+  type        = string
+  description = "The ingress type. Can be either 'traefik', 'istio' or 'none'"
+  default     = "none"
+}
+
 # Auth
 variable "grafana_adminPassword" {
   type        = string
