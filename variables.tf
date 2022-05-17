@@ -26,6 +26,7 @@ variable "ingress_type" {
 variable "grafana_adminPassword" {
   type        = string
   description = ""
+  sensitive   = true
 }
 
 variable "grafana_root_url" {
@@ -41,6 +42,7 @@ variable "grafana_client_id" {
 variable "grafana_client_secret" {
   type        = string
   description = ""
+  sensitive   = true
 }
 
 variable "grafana_auth_url" {

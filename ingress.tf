@@ -22,7 +22,7 @@ spec:
 
   depends_on = [
     kubernetes_namespace.monitoring,
-    helm_release.monitoring,
+    helm_release.prometheus_stack,
     kubectl_manifest.certificate
   ]
 }
@@ -47,6 +47,6 @@ spec:
 
   depends_on = [
     kubernetes_namespace.monitoring,
-    helm_release.monitoring
+    helm_release.prometheus_stack
   ]
 }
